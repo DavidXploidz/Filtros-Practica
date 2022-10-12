@@ -25,10 +25,14 @@ function validaCheckbox()
 {
   var checked = checkbox.checked;
   if(checked){
+    const copyarray = [{id: 21, titulo: "Por favor!!", color: "Blue", precio: 155 }]
     const porColorAzul = datosGenerales.filter(filtrado => filtrado.color == 'Blue')
     datosGuardados = porColorAzul
     console.log(datosGuardados)
-    generarData(porColorAzul)
+    console.log(copyarray)
+    const array3 = porColorAzul.concat(copyarray);
+    console.log(array3)
+    generarData(array3)
   }else{
     const porColorAzul = datosGenerales.filter(filtrado => filtrado.color !== 'Blue')
     datosGuardados = porColorAzul
