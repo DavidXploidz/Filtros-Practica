@@ -1,0 +1,23 @@
+[
+    {"id":1,"titulo":"Vere","color":"Orange","precio":505},
+    {"id":2,"titulo":"Bianka","color":"Turquoise","precio":735},
+    {"id":3,"titulo":"Verina","color":"Puce","precio":723},
+    {"id":4,"titulo":"Angil","color":"Orange","precio":815},
+    {"id":5,"titulo":"Marcela","color":"Mauv","precio":1467},
+    {"id":6,"titulo":"Hettie","color":"Blue","precio":767},
+    {"id":7,"titulo":"Dane","color":"Turquoise","precio":1019},
+    {"id":8,"titulo":"Jere","color":"Blue","precio":1347},
+    {"id":9,"titulo":"Frances","color":"Purple","precio":593},
+    {"id":10,"titulo":"Yvette","color":"Orange","precio":548},
+    {"id":11,"titulo":"Claybourne","color":"Orange","precio":346},
+    {"id":12,"titulo":"Matteo","color":"Purple","precio":1421},
+    {"id":13,"titulo":"Marcos","color":"Orange","precio":418},
+    {"id":14,"titulo":"Nancee","color":"Indigo","precio":1026},
+    {"id":15,"titulo":"Mae","color":"Teal","precio":1217},
+    {"id":16,"titulo":"Winifred","color":"Red","precio":799},
+    {"id":17,"titulo":"Margit","color":"Puce","precio":143},
+    {"id":18,"titulo":"Riley","color":"Blue","precio":1115},
+    {"id":19,"titulo":"Lisa","color":"Turquoise","precio":552},
+    {"id":20,"titulo":"Khalil","color":"Blue","precio":356}
+
+]

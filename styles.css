@@ -1,0 +1,23 @@
+
+.grid-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+}
+.titulo{
+    font-size: 19px;
+    color: rgb(55, 55, 165);
+}
+
+.descripcion{
+    font-size: 16px;
+    color: #aaa;
+}
+
+img{
+    max-width: 100%;
+    width: 200px;
+    border-radius: 14px;
+    height: 150px;
+}
