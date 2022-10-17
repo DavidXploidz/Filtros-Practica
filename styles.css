@@ -14,10 +14,29 @@
     font-size: 16px;
     color: #aaa;
 }
+.titulo2{
+    font-size: 19px;
+    color: rgb(55, 55, 165);
+}
+
+.descripcion2{
+    font-size: 16px;
+    color: #aaa;
+}
 
 img{
     max-width: 100%;
     width: 200px;
     border-radius: 14px;
     height: 150px;
+}
+.ocultar{
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+.mostrar{
+    visibility: visible;
+    opacity: 1;
+    order: 0;
 }

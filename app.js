@@ -1,16 +1,20 @@
 //Variables Globales
 
-const titulo = document.querySelector('.titulo')
-const descripcion = document.querySelector('.descripcion')
-const fecha = document.querySelector('.fecha')
+const titulo = document.querySelector('#titulo')
+const descripcion = document.querySelector('#descripcion')
+const fecha = document.querySelector('#fecha')
 const imagen = document.querySelector('#imagen')
+
 const contenedorPadre = document.querySelector('#contenedorPadre')
-// const filtro1 = document.querySelector('#deportes')
-const filtro2 = document.querySelector('#entretenimiento')
+
+const blue = document.querySelector('#deportes')
+const orange = document.querySelector('#entretenimiento')
+const indigo = document.querySelector('#indigo')
+
 
 
 let datosGenerales = []
-let datosGuardados = []
+let datosGuardados
 
 //Obtener datos json
 document.addEventListener('DOMContentLoaded',()=> {
@@ -18,46 +22,32 @@ document.addEventListener('DOMContentLoaded',()=> {
 })
 
 
-let checkbox = document.querySelector('#deportes')
-checkbox.addEventListener("change", validaCheckbox, false)
+blue.addEventListener('click',() => {
+  const todos = document.querySelectorAll('.descripcion')
+  todos.forEach(function(parrafo){
+   
+    if(parrafo.textContent == 'Blue'){
+      parrafo.parentElement.classList.toggle('mostrar')
+    }
 
-function validaCheckbox()
-{
-  var checked = checkbox.checked;
-  if(checked){
-    const copyarray = [{id: 21, titulo: "Por favor!!", color: "Blue", precio: 155 }]
-    const porColorAzul = datosGenerales.filter(filtrado => filtrado.color == 'Blue')
-    datosGuardados = porColorAzul
-    console.log(datosGuardados)
-    console.log(copyarray)
-    const array3 = porColorAzul.concat(copyarray);
-    console.log(array3)
-    generarData(array3)
-  }else{
-    const porColorAzul = datosGenerales.filter(filtrado => filtrado.color !== 'Blue')
-    datosGuardados = porColorAzul
-    generarData(datosGuardados)
-  }
-}
+  })
 
-let checkbox2 = document.querySelector('#entretenimiento')
-checkbox2.addEventListener("change", validaCheckbox2, false)
+})
 
-function validaCheckbox2()
-{
-  var checked = checkbox2.checked;
-  if(checked){
-    const porColorOrange = datosGenerales.filter(filtrado => filtrado.color == 'Orange')
-    datosGuardados = porColorOrange
-    datosGuardados.concat(porColorOrange)
-    console.log(datosGuardados)
-    generarData(porColorOrange)
-  }else{
-    const porColorOrange = datosGenerales.filter(filtrado => filtrado.color !== 'Orange')
-    datosGuardados = porColorOrange
-    generarData(porColorOrange)
-  }
-}
+orange.addEventListener('click',() => {
+  const todos = document.querySelectorAll('.descripcion')
+  todos.forEach(function(parrafo){
+
+    if(parrafo.textContent == 'Orange'){
+      parrafo.parentElement.classList.toggle('mostrar')
+
+    }
+ 
+    
+  })
+})
+
+
 
 const cargarDatos = async () => {
     const respuesta = await fetch('http://127.0.0.1:5500/MOCK_DATA2.json')
@@ -71,6 +61,7 @@ function generarData(datos){
     limpiarHTML()
     datos.forEach(item => {
         const newDiv = document.createElement('DIV')
+        newDiv.classList.add('ocultar')
 
         const newIMG = document.createElement('IMG')
         newIMG.src = `images/jordan1.jpg`
@@ -94,9 +85,10 @@ function generarData(datos){
     });
 }
 
+
+
 function limpiarHTML(){
     while(contenedorPadre.firstChild){
         contenedorPadre.removeChild(contenedorPadre.firstChild)
     }
 }
-
